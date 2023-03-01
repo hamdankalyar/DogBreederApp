@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default styles for header, h1, select, and dog image */
+header {
+    background-color: #ff3333;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #fff;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    background-color: #ff6666;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.dog-img {
+    display: block;
+    margin: 0 auto;
+    border: 10px solid #ff6666;
+    border-radius: 10px;
+    height: 474px;
+    width: 500px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loading-img {
+    height: 60px;
+}
+
+#loading-spinner {
+    animation: spin 2s linear infinite;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+    select {
+        font-size: 16px;
+    }
+    .dog-img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+/* Media query for medium screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+        letter-spacing: 6px;
+    }
+    select {
+        font-size: 18px;
+    }
+    .dog-img {
+        height: auto;
+        width: 80%;
+    }
+}
+
+/* Media query for large screens */
+@media screen and (min-width: 1025px) {
+    h1 {
+        font-size: 64px;
+        letter-spacing: 8px;
+    }
+    select {
+        font-size: 20px;
+    }
+    .dog-img {
+        height: 474px;
+        width: 500px;
+    }
+}
+:root {
+    --primary-color: #ff3333; /* Set the primary color to a bright red shade */
+    --background-color: #fff; /* Set the background color to white */
+  }
+  
+  /* Dark mode */
+  .dark-mode {
+    --primary-color: #ff6666; /* Set the primary color to a darker shade of red */
+    --background-color: #333; /* Set the background color to a dark gray */
+  }
+  
+ 
+ 
+  
+  /* Use the background color variable to set the background color of the page */
+  body {
+    background-color: var(--background-color);
+  }
+  
+  /* Use the primary color variable to set the background color of buttons */
+  button {
+    background-color: var(--primary-color);
+    color: #fff; /* Use a light color for the text to contrast with the background */
+  }
+  
+  /* Use the primary color variable to set the background color of the dark mode toggle button */
+  .dark-mode-toggle {
+    background-color: var(--primary-color);
+    color: #fff; /* Use a light color for the text to contrast with the background */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  
+  
